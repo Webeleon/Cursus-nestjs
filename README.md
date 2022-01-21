@@ -2,6 +2,8 @@
 
 
 ## [Installation et premier démarrage](./1-installation/1-installation.md)
+- [quizz](./1-installation/quizz.md)
+- [TP](./1-installation/TP.md)
 
 ## Module
 
