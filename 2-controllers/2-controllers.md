@@ -150,3 +150,54 @@ export class CliController {}
 ```
 
 il ne reste plus qu'a le remplir via la méthode vue précédemment ;) 
+
+## Accéder aux données:
+
+Dans le routage, il est possible de définit de d'accéder à un ensemble de données.
+
+### Body
+
+Le body est disponible via l'annotation `@Body`
+```ts
+import { Post, Body } from '@nestjs/common';
+
+class AppController {
+  @Post()
+  create(@Body() body) {}
+}
+```
+
+### Query Parameters
+
+Les query parameters sont accessible via l'annotation `@Query()`.
+```ts
+import { Get, Query } from '@nestjs/common';
+
+class AppController {
+  @Get()
+  create(@Query() queryParams) {}
+}
+```
+
+Il est possible de n'obtenir qu'un seul query parameter en la spécifiant dans l'annotation `@Query`
+```ts
+import { Get, Query } from '@nestjs/common';
+
+class AppController {
+  @Get()
+  create(@Query('limit') limit: number) {}
+}
+```
+
+### Paramétre de routage
+
+Il est courant de dans le paradigme REST d'accéder à une ressource via son id dans la route.
+Les paramètre de route sont disponible via l'annotation `@Params`
+```ts
+import { Get, Params } from '@nestjs/common';
+
+class AppController {
+  @Get(':id')
+  create(@Params('id') id: string) {}
+}
+```
