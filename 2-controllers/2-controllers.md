@@ -7,11 +7,28 @@ Un controlleur est responsable d'accepter et de gérer un ensemble de requéte.
 La mecanique de routage permet de définir quel controlleur gére quel requéte.
 En générale, un controlleur gérera plusieurs routes et chaque route permettra différente action.
 
-### API REST
+### API REST (REpresentational State Transfer)
 
 Dans un premier temps nous travaillerons sur la mise en place d'une API REST.
 REST est un ensemble de convention architectural qui à pour objectif de présenter une interface commune à l'accés de différentes ressource.
 Les API graphql seront traité dans un chapitre ultérieur.
+
+#### Définition REST
+
+Il s'agit d'une approche architecturale qui met au premier plan les ressources. 
+Une ressource étant tout élément identifiable sur le web... 
+Cela ce traduit par une utilisation des verbes http, de schema d'url uniforme et l'utilisatiom des [code de réponse HTTP](https://fr.wikipedia.org/wiki/Liste_des_codes_HTTP).
+
+Il est noté qu'une API REST ne doit pas conserver d'état dans ses routes.
+
+Prenons l'exemple d'une api gérant des pokemon (la resources), une api rest standard proposera les routes suivantes:
+
+- [GET][200] `/pokemon` list les pokemon
+- [GET][200 ou 404] `/pokemon/:numero` retourne les détails 
+- [POST][201] `/pokemon` crée un pokemon, les détails seront passé dans le body de la requéte
+- [PATCH][200 ou 404] `/pokemon/:numero` mise à jour partiel d'un pokemon, les détails seront passé dans le body de la requéte
+- [PUT][200 ou 404] `/pokemon/:numero` mise à jour d'un pokemon, les détails seront passé dans le body 
+- [DELETE][200 ou 404] `/pokemon/:numero` suppression d'un pokemon
 
 ### Verbe http
 
