@@ -14,11 +14,17 @@
 - [quizz](2.1-validation-via-dto/quizz.md)
 - [TP](2.1-validation-via-dto/TP.md)
 
-## Services
+## [3 - Providers](3-providers/3-providers.md)
+- [quizz](3-providers/quizz.md)
+
 ### creation
 ### utiliser un service dans un controlleurs
 
 ## [Modules](4-modules/modules.md)
+
+## Tests
+### Unitaire
+### End 2 End
 
 ## Gestion des erreurs
 
@@ -35,6 +41,8 @@
 ### Instance in memory pour les tests
 
 ## Configuration
+
+## Guards
 
 ## Swagger
 ### Installation et configuration
