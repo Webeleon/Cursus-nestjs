@@ -37,11 +37,11 @@ On ce référe à ces méthodes via le terme `verbe http`.
 Chacune à pour objectif d'implémenter différente sémantique.
 
 verbes les plus courants:
-    - GET: lecture d'une ou plusieurs ressources 
-    - POST: création d'une resources
-    - DELETE: suppression d'une ressources
-    - PATCH: mise à jours partiel d'une ressources
-    - PUT: mise à jours compléte d'une ressources
+- GET: lecture d'une ou plusieurs ressources 
+- POST: création d'une resources
+- DELETE: suppression d'une ressources
+- PATCH: mise à jours partiel d'une ressources
+- PUT: mise à jours compléte d'une ressources
 
 
 ## Méthode manuel: pour bien comprendre
@@ -102,7 +102,7 @@ la route est ensuite créer en ajoutant le préfixe définit dans l'annotation `
 
 Les annotations de paramétre (touver un meilleur nom...???):
 
-- `@Param('nom du param')`: permet de récupérer les paramétre définit dans les annotations de routage.
+- `@Params('nom du param')`: permet de récupérer les paramétre définit dans les annotations de routage.
 - `@Body()`: permet de récupérer le body de la requéte pour les routes avec un verbe authorisant un body (post, patch, put, ...)
 
 ### Ajouter le controlleur dans le module
@@ -186,6 +186,8 @@ class AppController {
 
 ### Query Parameters
 
+TODO: definition query parameters
+
 Les query parameters sont accessible via l'annotation `@Query()`.
 ```ts
 import { Get, Query } from '@nestjs/common';
@@ -218,3 +220,5 @@ class AppController {
   create(@Params('id') id: string) {}
 }
 ```
+
+### @Headers

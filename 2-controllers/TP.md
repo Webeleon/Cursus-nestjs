@@ -16,9 +16,9 @@ Créer une API avec les routes (endpoints) suivant:
   type: string;
 }
 ```
-- [GET] `/` retourne la liste des pokemons stocké
-- [GET] `/:id` retourne le pokemon avec l'id en paramétre ou une erreur 404 avec un message bien senti
-- [PATCH] `/:id` met à jour le pokemon avec l'id en paraméte ou une erreur 404
-- [DELET] `/:id` supprime le pokemon avec l'id
+- [GET] `/pokemon` retourne la liste des pokemons stocké
+- [GET] `/pokemon/:id` retourne le pokemon avec l'id en paramétre ou une erreur 404 avec un message bien senti
+- [PATCH] `/pokemon/:id` met à jour le pokemon avec l'id en paraméte ou une erreur 404
+- [DELETE] `/pokemon/:id` supprime le pokemon avec l'id
 
 
