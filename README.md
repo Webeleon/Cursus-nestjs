@@ -16,9 +16,7 @@
 
 ## [3 - Providers](3-providers/3-providers.md)
 - [quizz](3-providers/quizz.md)
-
-### creation
-### utiliser un service dans un controlleurs
+- [TP](3-providers/TP.md)
 
 ## [Modules](4-modules/modules.md)
 
