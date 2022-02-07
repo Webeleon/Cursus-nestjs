@@ -18,7 +18,9 @@
 - [quizz](3-providers/quizz.md)
 - [TP](3-providers/TP.md)
 
-## [Modules](4-modules/modules.md)
+## [4 - Modules](4-modules/modules.md)
+- [quizz](4-modules/quizz.md)
+- [TP](4-modules/TP.md)
 
 ## Tests
 ### Unitaire
