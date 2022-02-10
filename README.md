@@ -22,9 +22,18 @@
 - [quizz](4-modules/quizz.md)
 - [TP](4-modules/TP.md)
 
-## Tests
-### Unitaire
+## [5 - Tests](5-tests/5-tests.md)
+### [tests unitaire](5-tests/5-tests-unitaires.md)
+- [TP](5-tests/TP-test-unitiaire.md)
 ### End 2 End
+
+## Configuration
+
+## SQL via TYPEORM
+### installation et configuration
+### création de schema
+### utilisation dans un service
+### Instance in memory pour les tests
 
 ## Gestion des erreurs
 
@@ -33,14 +42,6 @@
 ### création de schema
 ### utilisation dans un service
 ### Instance in memory pour les tests
-
-## SQL via TYPEORM
-### installation et configuration
-### création de schema
-### utilisation dans un service
-### Instance in memory pour les tests
-
-## Configuration
 
 ## Guards
 
@@ -59,3 +60,6 @@
 ### Login via google, discord, facebook
 
 ## Docker
+
+## Nest Axios
+### Tester avec Axios

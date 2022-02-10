@@ -3,10 +3,11 @@
 Un module est une classe sur laquelle est appliqué l'annotation `@Module()`.
 L'annocation module permet de définir des métadonnées qui vont permettre d'organiser la structure de notre application Nest.
 
-Une application nest, doit avoir au minimum un modul, le `module racine`.
+Une application nest, doit avoir au minimum un module, le `module racine`.
 Le module racine est le point d'entrée qui va permettre de définir l'arbre de dépendance de l'application.
 En théorie, une petite application peu avoir un seul module. 
 Il est cependant fortement recommander d'utiliser des modules pour organiser le code en unité de logique métier et d'encapsuler les fonctionnalités.
+(Domain Driven Developement)
 
 ## le décorateur `@Module`
 
@@ -25,7 +26,7 @@ Ceci est une définition logique et n'est pas une contrainte de code.
 
 Le controlleurs et les services du module `User` appartiennent au même domaine métier.
 Ils est donc logique de les stocker dans un module commun `UserModule`.
-Un module de finctionnalité est une unité de logique métier cohérente permettant de renforcer les pincipe SOLID.
+Un module de fonctionnalité est une unité de logique métier cohérente permettant de renforcer les pincipe SOLID.
 
 ```ts
 import { Module } from '@nestjs/common';
@@ -51,7 +52,7 @@ import { UsersModule } from './users/users.module';
 export class AppModule {}
 ```
 
-### Les modules partagés
+### Les modules partagés // module technique
 
 Ces modules vont avoir pour objectif de fournir des `providers` utilitaire dans notre application.
 Ils utilisent l'option `exports` dans la configuration du module et sont importé la ou requis.
@@ -94,5 +95,4 @@ import { TypeORMModule } from '@nestjs/typeorm';
 export class AppModule {}
 ```
 
-
-
+// TODO: comment créer ce genre de module

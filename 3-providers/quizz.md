@@ -12,7 +12,8 @@
 - @Injectable
 - @Infectable
 
-## Afin de pouvoir utiliser un service dans les controllers d'un module dans quel configuration faut il le déclarer?
+## Formulation de merde à revoir
+## Afin de pouvr oiutiliser un service dans les controllers d'un module dans quel configuration faut il le déclarer?
 - providers
 - services
 - controllers

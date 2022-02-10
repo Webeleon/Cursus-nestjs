@@ -4,6 +4,7 @@
 
 SOLID est un acronyme qui représente 5 principe d'architecture logiciel qui ont pour objectif de rendres les source (orienté objet) plus lisible, compréhensible et maintenable.
 
+
 - <u>Principe de responsabilité unique *(Single responsibilty)*:</u> Une classe ne doit avoir qu'un seul et unique role!
 - <u>Principe d'ouverture-fermeture *(Open-closed principle)*:</u> Une classe doit être ouverte au extension (via un systéme de plugin par exemple, cf architecture hexagonale) mais fermé au modification.
 - <u>Prinicpe de la substitution de Liskov *(Liskov substitution)*:</u> L'utilisation de classes héritant d'une interface commune doivent pouvoir s'utiliser de maniére transparente.
@@ -53,7 +54,7 @@ import { MonSuperProvider } from './mon-super.provider';
 @Controller()
 export class AppController {
   constructor(
-    private readonly superProvider: MonSuperProvider
+    private readonly superProvider: MonSuperProvider,
   ) {}
 }
 ```

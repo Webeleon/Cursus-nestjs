@@ -7,7 +7,7 @@
 - aucune, c'est un comportement natif de nest
 
 
-## Quel est le nombre maximum de module requis pour démarrer une app Nest?
+## Quel est le nombre minimum de module requis pour démarrer une app Nest?
 - 1
 - 2
 - plusieurs
