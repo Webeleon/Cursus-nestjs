@@ -6,7 +6,7 @@ Un test end to end sera mise en place afin de valider notre travail
 
 ## Bootstrap du projet
 
-- créer une nouvelle app nest `calculatruce-api`
+- créer une nouvelle app nest `calculatrice-api`
 - créer un module calculatrice
 - créer un controlleur calculatrice
 - créer un service calculatrice
@@ -17,7 +17,7 @@ Un test end to end sera mise en place afin de valider notre travail
 - Écrire un test pour les méthodes de service suivantes:
 - `sum`: renvoi la somme d'un nombre indéterminé de number passé en paramétre
 - `multiply`: renvoi le résultat de la multiplication d'un numbre indéterminé de paramétre
-- `divide`: retourne le résultat de la division de 2 nombre passé en paramétre
+- `divide`: retourne le résultat de la division de 2 nombre passé en paramétre (attention division par 0)
 - `power`: retounr le resulat de la puissance *n* d'un nombre *x*
 - implémenter les 4 méthodes et pour que les tests soit vert
 

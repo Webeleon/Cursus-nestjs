@@ -25,7 +25,8 @@
 ## [5 - Tests](5-tests/5-tests.md)
 ### [tests unitaire](5-tests/5-tests-unitaires.md)
 - [TP](5-tests/TP-test-unitiaire.md)
-### End 2 End
+### [End 2 End](5-tests/5-tests-e2e.md)
+- [TP](5-tests/TP-test-e2e.md)
 
 ## Configuration
 
