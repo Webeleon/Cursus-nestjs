@@ -124,14 +124,18 @@ describe('AppController (e2e)', () => {
 
   it('/ (Header)', async () => {
     const { body, status } = request(app.getHttpServer())
+      .get('/') 
       .set({
         Authorization: 'Bearer XXXXXXXX',
         // Les Headers vont ici
       })
-      .get('/');
+      .set('HEADER', 'VALUE') // Pour un header seul
+    ;
     
     expect(status).toBe(403);
   });
   
 });
 ```
+
+Attention, la méthode `set` doit être utilisé aprés la méthode de route (`get`, `post`, ...)
