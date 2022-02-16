@@ -1,7 +1,9 @@
 # test end 2 end (e2e)
 
-Les test unitaires, bien que fondamental, ont plusieurs limitation.
+Les test unitaires, bien que fondamental, ont plusieurs limitation .
+
 Ils testent uniquement des élémets de nor application de maniére individuel mais à aucun moment que le tout.
+
 Dans le cadre de la construction d'une auto, ils testeraient les roues, le moteur, le chassis, les durites mais pas l'assemblage de l'auto.
 
 ![Unit test vs functional test](./unit_vs_e2e.gif)
