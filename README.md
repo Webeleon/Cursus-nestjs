@@ -28,7 +28,9 @@
 ### [End 2 End](5-tests/5-tests-e2e.md)
 - [TP](5-tests/TP-test-e2e.md)
 
-## Configuration
+## [6 - Configuration](6-configurations/6-configurations.md)
+- [Quizz](6-configurations/6-quizz.md)
+- [TP](6-configurations/6-TP.md)
 
 ## SQL via TYPEORM
 ### installation et configuration
