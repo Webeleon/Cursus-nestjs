@@ -1,6 +1,6 @@
 # 6 Configurations
 
-Il est commun d'utiliser une application dans plusieurs envirronement:
+Il est commun d'utiliser une application dans plusieurs environement:
 - local
 - test
 - developement
@@ -204,13 +204,13 @@ import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/confifg';
 
 @Module({
-    providers: [
+  imports: [ ConfigModule ],
+  providers: [
       SomeService,
       {
         // ce sera notre token d'injection dans les providers/controllers du module
         provide: 'database-config',
         // Chargement des dépendances pour notre factory
-        imports: [ ConfigModule ],
         inject: [ ConfigService ],
         // Factory: le retour de cette fonction sera injecter lors de la demande via le token définit plus haut
         useFactory: (configService: ConfigService) => configService.get('database')

@@ -1,14 +1,14 @@
 # Cursus créer une api avec NestJS
 
-## Intro NestJS from scratch
+## [0 - Intro NestJS from scratch](./0-nest-from-scratch/0-nest-from-scratch.md)
 
 ## [1 - Installation et premier démarrage](./1-installation/1-installation.md)
 - [quizz](./1-installation/quizz.md)
 - [TP](./1-installation/TP.md)
 
-## [2 - Controlleurs](2-controllers/2-controllers.md)
-- [quizz](2-controllers/quizz.md)
-- [TP](2-controllers/TP.md)
+## [2 - Controlleurs](2.0-controllers/2-controllers.md)
+- [quizz](2.0-controllers/quizz.md)
+- [TP](2.0-controllers/TP.md)
 
 ### [2.1 - Validation via les DTO](2.1-validation-via-dto/2.1-validation-via-dto.md)
 - [quizz](2.1-validation-via-dto/quizz.md)
@@ -28,7 +28,7 @@
 ### [End 2 End](5-tests/5-tests-e2e.md)
 - [TP](5-tests/TP-test-e2e.md)
 
-## [6 - Configuration](6-configurations/6-configurations.md)
+## [6 - Configurations](6-configurations/6-configurations.md)
 - [Quizz](6-configurations/6-quizz.md)
 - [TP](6-configurations/6-TP.md)
 

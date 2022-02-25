@@ -12,7 +12,7 @@
 - env
 - aucune, c'est déjà super simple
 
-## Si j'utilise l'option `isGlobal`, ai-je besoin d'importer le `ConfigModule` dans mes module de feature pour accéder au `ConfigService`
+## Si j'utilise l'option `isGlobal`, ai-je besoin d'importer le `ConfigModule` dans mes modules de feature pour accéder au `ConfigService`
 - Oui
 - Non
 
