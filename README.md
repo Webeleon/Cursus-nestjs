@@ -1,6 +1,8 @@
 # Cursus créer une api avec NestJS
 
 ## [0 - Intro NestJS from scratch](./0-nest-from-scratch/0-nest-from-scratch.md)
+- [video](https://www.youtube.com/watch?v=uW2wakcgmZI&t=8s)
+- [dev.to](https://dev.to/webeleon/0-nest-js-from-scratch-20b1)
 
 ## [1 - Installation et premier démarrage](./1-installation/1-installation.md)
 - [quizz](./1-installation/quizz.md)
