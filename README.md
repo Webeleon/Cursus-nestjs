@@ -8,31 +8,31 @@
 - [quizz](./1-installation/quizz.md)
 - [TP](./1-installation/TP.md)
 
-## [2 - Controlleurs](2.0-controllers/2-controllers.md)
-- [quizz](2.0-controllers/quizz.md)
-- [TP](2.0-controllers/TP.md)
+## [3 - Controlleurs](3-controllers/3-controllers.md)
+- [quizz](3-controllers/quizz.md)
+- [TP](3-controllers/TP.md)
 
-### [2.1 - Validation via les DTO](2.1-validation-via-dto/2.1-validation-via-dto.md)
-- [quizz](2.1-validation-via-dto/quizz.md)
-- [TP](2.1-validation-via-dto/TP.md)
+### [4 - Validation via les DTO](4-validation-via-dto/4-validation-via-dto.md)
+- [quizz](4-validation-via-dto/quizz.md)
+- [TP](4-validation-via-dto/TP.md)
 
-## [3 - Providers](3-providers/3-providers.md)
-- [quizz](3-providers/quizz.md)
-- [TP](3-providers/TP.md)
+## [5 - Providers](5-providers/5-providers.md)
+- [quizz](5-providers/quizz.md)
+- [TP](5-providers/TP.md)
 
-## [4 - Modules](4-modules/modules.md)
-- [quizz](4-modules/quizz.md)
-- [TP](4-modules/TP.md)
+## [6 - Modules](6-modules/6 - modules.md)
+- [quizz](6-modules/quizz.md)
+- [TP](6-modules/TP.md)
 
-## [5 - Tests](5-tests/5-tests.md)
-### [tests unitaire](5-tests/5-tests-unitaires.md)
-- [TP](5-tests/TP-test-unitiaire.md)
-### [End 2 End](5-tests/5-tests-e2e.md)
-- [TP](5-tests/TP-test-e2e.md)
+## [7 - Tests](7-tests/5-tests.md)
+### [tests unitaire](7-tests/5-tests-unitaires.md)
+- [TP](7-tests/TP-test-unitiaire.md)
+### [End 2 End](7-tests/5-tests-e2e.md)
+- [TP](7-tests/TP-test-e2e.md)
 
-## [6 - Configurations](6-configurations/6-configurations.md)
-- [Quizz](6-configurations/6-quizz.md)
-- [TP](6-configurations/6-TP.md)
+## [8 - Configurations](8-configurations/8-configurations.md)
+- [Quizz](8-configurations/8-quizz.md)
+- [TP](8-configurations/8-TP.md)
 
 ## SQL via TYPEORM
 ### installation et configuration

@@ -1,4 +1,4 @@
-# 4 - Les modules
+# 6 - Les modules
 
 Un module est une classe sur laquelle est appliqué l'annotation `@Module()`.
 L'annocation module permet de définir des métadonnées qui vont permettre d'organiser la structure de notre application Nest.

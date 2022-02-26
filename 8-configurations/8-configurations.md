@@ -1,4 +1,4 @@
-# 6 Configurations
+# 8 Configurations
 
 Il est commun d'utiliser une application dans plusieurs environement:
 - local
