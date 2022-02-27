@@ -2,8 +2,7 @@
 
 ## Pré-requis:
 
-- Node JS 
-- npm
+- NodeJS Lts
 
 ## Installer la CLI nestjs
 
@@ -16,6 +15,8 @@ npm i -g @nestjs/cli
 ```bash
 nest new nom-du-projet
 cd nom-du-projet
+npm run test
+npm run test:e2e
 npm run start:dev
 ```
 

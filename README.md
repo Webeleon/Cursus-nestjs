@@ -8,6 +8,8 @@
 - [quizz](./1-installation/quizz.md)
 - [TP](./1-installation/TP.md)
 
+## 2 - La base des modules
+
 ## [3 - Controlleurs](3-controllers/3-controllers.md)
 - [quizz](3-controllers/quizz.md)
 - [TP](3-controllers/TP.md)
