@@ -1,4 +1,4 @@
-# Cursus créer une api avec NestJS
+# Cursus NestJS: devenir un expert de NestJS!
 
 ## [0 - Intro NestJS from scratch](./0-nest-from-scratch/0-nest-from-scratch.md)
 - [video](https://www.youtube.com/watch?v=uW2wakcgmZI&t=8s)
