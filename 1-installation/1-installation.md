@@ -1,57 +1,55 @@
-# Installer nest JS
+{% youtube AJb6B5iECQU %}
 
-Bienvenue dans la premiére leçon qui est la seconde vidéo de la chaine!
-Je m'appel Julien et je suis votre guide dans cette formation NestJS qui fera de toi un véritable expert de NestJS.
+Bienvenue dans la première leçon qui est la seconde vidéo de la chaîne!
+Je m'appelle Julien et je serai ton guide dans cette formation NestJS qui fera de toi un véritable expert de NestJS.
 
-Alors abonne toi pour progresser rapidement!
+Alors abonne-toi pour progresser rapidement!
 
 Je te retrouve dans le terminal pour installer Nest.
 
 ## Pré-requis:
 
-NestJS étant un framework typescript pour node, il nécessaire que tu ai installé Node.js, idéalement la derniére version lts (Long Term Support).
+NestJS étant un framework typescript pour node, il nécessaire que tu aies installé Node.js, idéalement la dernière version lts (Long Term Support).
 ```bash
 node -v
 ```
 
 ## Installer la CLI nestjs
 
-Ok, pour commencer il faut installer l'outils en ligne de commande via la commande:
+Ok, pour commencer il faut installer l'outil en ligne de commande via la commande:
 ```bash
 npm i -g @nestjs/cli
 ```
-J'utilise npm mais sent toi libre d'utiliser un autre gestionnaire de paquet javascript.
+J'utilise npm mais sens-toi libre d'utiliser un autre gestionnaire de paquet javascript.
 
-À quoi va nous servir cet outils?
+À quoi va nous servir cet outil?
 ```bash
 nest --help
 ```
-- créer de nouveau projet nest `nest new <nom du projet>`
-- générer des modules, des controlleurs, des services, des guards et autre joyeuseté le tout avec un fichier de test `nest g|generate <schema> nom`
-- démarrer un projet nest 
+- créer de nouveaux projets nest `nest new <nom du projet>`
+- générer des modules, des contrôleurs, des services, des guards et autres joyeusetés le tout avec un fichier de test `nest g|generate <schema> nom`
+- démarrer un projet nest
 
-## Créer un projet 
+## Créer un projet
 
-C'est partie pour créer un projet:
+C'est parti pour créer un projet:
 ```bash
 nest new nom-du-projet
 cd nom-du-projet
 ```
 
-Dans ce projet un certain nombre de script npm sont disponible:
+Dans ce projet un certain nombres de script npm sont disponible:
 
-Lancer les tests unitaire et fonctionel (ou end 2 end)
+Lancer les tests unitaires et fonctionnels (ou end 2 end)
 ```bash
 npm run test
 npm run test:e2e
 ```
 
-Démarrer le projet en mode dévellopement, c'est à dire avec un re-démarrage automatique lorsque les sources sont modifié.
+Démarrer le projet en mode développement, c'est à dire avec un re-démarrage automatique lorsque les sources sont modifiées.
 ```bash
 npm run start:dev
 ```
-
-// jump dans l'ide fichier package.json
 
 Transpiler la version typescript en javascript dans le dossier `dist`
 ```bash
@@ -68,18 +66,18 @@ Appliquer le formatage standardisé du code:
 npm run format
 ```
 
-### structure du projets
+### Structure du projet
 
-- src: contient les sources en typescript de l'api
-- test: stock les test end 2 end
-- dist: version transpilé en javascript
+- src: contient les sources en typescript de l'API
+- test: stocke les tests end 2 end
+- dist: version transpilée en javascript
 
 dans src:
 
 `main.ts` => configuration et démarrage de l'application nest
 `app.module.ts` => module principale
-`app.controller.ts` => controller utilisé pour déclarer les routes de l'api
-`app.service.ts` => les services sont utilisé pour accéder à la base de données, faires des calcules, stocker de la logique métiers
+`app.controller.ts` => contrôleur utilisé pour déclarer les routes de l'API
+`app.service.ts` => les services sont utilisés pour accéder à la base de données, faire des calculs, stocker de la logique métier
 
 
 ## Bibliographie et liens utiles

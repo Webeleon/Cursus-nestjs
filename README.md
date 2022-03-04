@@ -5,6 +5,8 @@
 - [dev.to](https://dev.to/webeleon/0-nest-js-from-scratch-20b1)
 
 ## [1 - Installation et premier démarrage](./1-installation/1-installation.md)
+- [video](https://www.youtube.com/watch?v=AJb6B5iECQU)
+- [dev.to](https://dev.to/webeleon/1-installation-de-nest-4mbd)
 - [quizz](./1-installation/quizz.md)
 - [TP](./1-installation/TP.md)
 
