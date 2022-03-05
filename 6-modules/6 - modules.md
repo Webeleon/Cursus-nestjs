@@ -1,22 +1,4 @@
-# 6 - Les modules
-
-Un module est une classe sur laquelle est appliqué l'annotation `@Module()`.
-L'annocation module permet de définir des métadonnées qui vont permettre d'organiser la structure de notre application Nest.
-
-Une application nest, doit avoir au minimum un module, le `module racine`.
-Le module racine est le point d'entrée qui va permettre de définir l'arbre de dépendance de l'application.
-En théorie, une petite application peu avoir un seul module. 
-Il est cependant fortement recommander d'utiliser des modules pour organiser le code en unité de logique métier et d'encapsuler les fonctionnalités.
-(Domain Driven Developement)
-
-## le décorateur `@Module`
-
-Le décorateur `@Module` accepte un objet de configuration avec les propriété suivante:
-
-- `providers` providers disponible pour l'injection de dépendances dans le module
-- `controllers` définit les controller à instancier pour ce module
-- `imports` définit les modules dont dépend le module
-- `exports` un sous ensemble de providers qui seront disponible dans les modules qui importerons ce module
+# 6 - Les modules partie 2
 
 ## Les types de modules
 
