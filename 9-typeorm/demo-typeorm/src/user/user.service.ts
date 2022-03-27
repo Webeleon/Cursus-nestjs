@@ -11,10 +11,10 @@ export class UserService {
   ) {}
 
   list(
-    page: number = 0, pageSize: number = 10,
+    page: number = 1, pageSize: number = 10,
   ): Promise<User[]> {
     return this.userRepository.find({
-      skip: page * pageSize,
+      skip: (page - 1) * pageSize,
       take: pageSize
     });
   }

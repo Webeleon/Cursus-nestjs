@@ -1,21 +1,29 @@
-import { Module } from '@nestjs/common';
+import { Logger, Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UserModule } from './user/user.module';
 import { User } from './user/user.entity';
+import { ConfigModule, ConfigService } from '@nestjs/config';
+import { appConfig } from './config/app.config';
+import { databaseConfig } from './config/database.config';
 
 @Module({
   imports: [
-    TypeOrmModule.forRoot({
-      type: 'postgres',
-      host: 'localhost',
-      port: 5432,
-      username: 'postgres',
-      password: '',
-      database: 'demo_typorm',
-      entities: [User],
-      synchronize: true,
+    ConfigModule.forRoot({
+      load: [appConfig]
+    }),
+    TypeOrmModule.forRootAsync({
+      imports: [ConfigModule.forRoot({ load: [databaseConfig] })],
+      inject: [databaseConfig.KEY],
+      useFactory: (dbConfig: typeof databaseConfig) => {
+        Logger.debug(dbConfig);
+        return {
+          ...dbConfig,
+          entities: [User],
+          synchronize: true,
+        }
+      }
     }),
     UserModule
   ],

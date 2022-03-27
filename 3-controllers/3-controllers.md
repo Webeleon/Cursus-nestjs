@@ -1,11 +1,12 @@
 # Controlleurs
 
+
 ## Qu'est ce qu'un controlleur?
 
 Les controlleurs sont responsable de la gestions des requétes entrantes.
 Un controlleur est responsable d'accepter et de gérer un ensemble de requéte.
 La mecanique de routage permet de définir quel controlleur gére quel requéte.
-En générale, un controlleur gérera plusieurs routes et chaque route permettra différente action.
+En générale, un controlleur gérera plusieurs routes et chaque route permettra différentes actions.
 
 ### API REST (REpresentational State Transfer)
 
@@ -102,7 +103,8 @@ la route est ensuite créer en ajoutant le préfixe définit dans l'annotation `
 
 Les annotations de paramétre (touver un meilleur nom...???):
 
-- `@Params('nom du param')`: permet de récupérer les paramétre définit dans les annotations de routage.
+- `@Params('optionel: nom du param')`: permet de récupérer les paramétre définit dans les annotations de routage.
+- `Query('optionel: nom du pramétre')`
 - `@Body()`: permet de récupérer le body de la requéte pour les routes avec un verbe authorisant un body (post, patch, put, ...)
 
 ### Ajouter le controlleur dans le module

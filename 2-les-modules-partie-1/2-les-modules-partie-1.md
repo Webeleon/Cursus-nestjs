@@ -7,10 +7,12 @@ Alors abonne-toi pour progresser rapidement!
 
 Dans ce module, nous allons parler modules!
 
-## Le module racine
+## Un module?
 
 Un module est une classe exporté sur laquelle est appliqué l'annotation `@Module()`.
 L'annotation module permet de définir des métadonnées qui vont permettre d'organiser la structure de ton application Nest.
+
+## Le module racine
 
 Une application nest, doit avoir au minimum un module, le `module racine`.
 Le module racine est le point d'entrée qui va permettre de définir l'arbre de dépendance de l'application.
@@ -20,11 +22,13 @@ Il est cependant fortement recommandé d'utiliser des modules pour organiser le 
 
 ## le décorateur `@Module`
 
+Regardons de plus pret l'annotation `@Module` qui nous viens du package `@nestjs/common`.
+
 Le décorateur `@Module` accepte un objet de configuration avec les propriétés suivantes:
 
+- `imports` définit les modules dont dépend le module
 - `providers` liste les providers (ou fournisseur en français) disponible pour l'injection de dépendances dans le module
 - `controllers` définit les controller à instancier pour ce module
-- `imports` définit les modules dont dépend le module
 - `exports` permet d'exposer des providers qui seront disponible dans les modules qui importerons ce module.
 Je t'en parlerai en détails dans une prochaine vidéo. *alors abonne toi*
 

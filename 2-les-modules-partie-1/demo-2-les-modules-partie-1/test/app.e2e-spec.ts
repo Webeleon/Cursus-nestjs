@@ -7,9 +7,6 @@ describe('AppController (e2e)', () => {
   let app: INestApplication;
 
   beforeEach(async () => {
-    process.env.DB_TYPE = 'better-sqlite3';
-    process.env.DATABASE = ':memory:';
-
     const moduleFixture: TestingModule = await Test.createTestingModule({
       imports: [AppModule],
     }).compile();
