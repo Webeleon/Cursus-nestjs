@@ -36,7 +36,7 @@ Un controlleur vas être utilisé pour créer des routes pour notre API.
 C'est ensuite au controlleurs de faire un premier tour de validation, je te montre ça dans la prochaine vidéo.
 Et d'appeler les services et autres providers qui s'occuperons de la logique métier. 
 Pas de stress je te montre ça bientôt. :heart:
-Il est aussi de bon gout que le controlleur soit en charge de la sérialisation des erreurs qui seront envoyé au consommateur de l'api.
+Il est aussi de bon gout que le controlleur soit en charge de la sérialisation des erreurs et des réponses qui seront envoyé au consommateur de l'api.
 
 ## Créer un controller via la ligne de commande
 
@@ -59,6 +59,8 @@ mise à jour d'un livre dans la collection. Une erreur 404 sera retourné si l'i
 - [DELETE] /book/:id
 suppression d'un livre dans la collection. Une erreur 404 sera retourné si l'id du livre n'éxiste pas.
 
+### Création du projet
+
 Commence par créer un nouveau projet NestJS appelé book-api.
 ```zsh
 nest new book-api
@@ -77,6 +79,7 @@ CREATE src/book/book.controller.ts (97 bytes)
 UPDATE src/app.module.ts (322 bytes)
 ```
 
+### [GET] liste de la collection de livre
 Il est temps d'éditer le fichier `book/book.controller.ts`.
 
 Créer une route, c'est créer une méthode dans classe `BookController`.
@@ -106,7 +109,32 @@ Pour tester plusieurs solution s'offre à toi:
 - Via la commande [curl](https://curl.se/) si tu l'as d'installer `curl http://localhost:3000/book`
 - via un outils comme [postman](https://www.postman.com/)
 
+Pour éviter de refaire ce même test manuellement, l'ideal est d'ajouter un test end to end pour automatiser.
+Histoire de rester simple, ajoute une cas de test dans le fichier `test/app.e2e-spec.ts`.
+```ts
+import { Test, TestingModule } from '@nestjs/testing';
+import { INestApplication } from '@nestjs/common';
+import * as request from 'supertest';
+import { AppModule } from './../src/app.module';
+
+describe('AppController (e2e)', () => {
+  
+  // ... bootstrap et test par défaut
+
+  it('/book [GET]', () => {
+    return request(app.getHttpServer())
+      .get('/book')
+      .expect(200)
+      .expect([]);
+  });
+});
+
+```
+
+
 Super! tu sais afficher la liste par défaut!
+
+### [GET] Récupérer un livre par son index
 
 Tu vas pouvoir ajouter la méthode pour afficher un livre par son index dans le tableau `this.books`.
 C'est presque la même chose, tu cré une méthode `getBookByIndex` sur laquelle tu applique le décorateur `@Get('/:index')`.
@@ -141,7 +169,32 @@ Pour tester, même techniques qu'avant mais sur les routes
 - `http://localhost:3000/book/0`
 - `http://localhost:3000/book/1`
 
+Ajoute ces deux cas de test fonctionnel dans le fichier `test/app.e2e-spec.ts` pour automatiser le test.
+
+```ts
+// import dans l'exemple précédent
+
+describe('AppController (e2e)', () => {
+  
+  // cas de test de l'exemple précédent
+
+  it('/book/:index [GET][200]', () => {
+    return request(app.getHttpServer())
+      .get('/book/0')
+      .expect(200)
+      .expect('le secret de ji');
+  });
+
+  it('/book/:index [GET][404]', () => {
+    return request(app.getHttpServer()).get('/book/1').expect(404);
+  });
+});
+
+```
+
 Top! On liste la collection et on affiche un élément, c'est un bon début mais pas encore suffisant!
+
+### [POST] Ajouter un livre
 
 Il est temps maintenant de créer la méthode pour ajouter un livre dans notre collection.
 
@@ -166,7 +219,7 @@ export class BookController {
 }
 ```
 
-On test, cette fois le navigateur n'est pas une option car il envoie des requétes GET et il nous faut un POST.
+On test, cette fois le navigateur n'est pas une option car il envoie des requétes GET et il nous faut un POST en utilisant postman ou CURL.
 ```zsh
 curl --location --request POST 'http://localhost:3000/book' \
 --header 'Content-Type: application/json' \
@@ -174,7 +227,31 @@ curl --location --request POST 'http://localhost:3000/book' \
     "title": "test"
 }'
 ```
-Ou via postman.
+
+```ts
+// import dans les exemples précédents
+
+describe('AppController (e2e)', () => {
+  
+  // mise en place et test dans les exemples précédents
+
+  it('/book [POST][201]', async () => {
+    await request(app.getHttpServer())
+      .post('/book')
+      .send({
+        title: 'Super book',
+      })
+      .expect(201);
+
+    await request(app.getHttpServer())
+      .get('/book')
+      .expect(200)
+      .expect(['le secret de ji', 'Super book']);
+  });
+});
+```
+
+### [PUT] mise à jour d'un livre par index
 
 Et c'est partie pour la mise à jour d'un livre!
 
@@ -213,6 +290,36 @@ curl --location --request PUT 'http://localhost:3000/book/0' \
 }'
 ```
 
+Et voici le test end 2 end
+```ts
+// ...
+
+describe('AppController (e2e)', () => {
+  
+  // ...
+
+  it('/book/index [PUT][200]', async () => {
+    await request(app.getHttpServer())
+      .put('/book/0')
+      .send({
+        title: 'nouveau titre',
+      })
+      .expect(200);
+
+    await request(app.getHttpServer())
+      .get('/book/0')
+      .expect(200)
+      .expect('nouveau titre');
+  });
+
+  it('/book/index [PUT][404]', () => {
+    return request(app.getHttpServer()).put('/book/1').expect(404);
+  });
+});
+```
+
+### [DELETE] supprimer un livre
+
 On à presque finis, il ne reste plus qu'à faire la suppression.
 Donc, pour la suppression, une méthode `deleteBook` sur laquelle tu applique le décorateur `@Delete('/:id')`.
 Tu vérifie que le livre existe, si c'est le cas il faut le supprimer du tableau.
@@ -244,11 +351,33 @@ Un curl en cadeau pour tester:
 curl --location --request DELETE 'http://localhost:3000/book/0'
 ```
 
+Et le test fonctionnel!
+
+```ts
+// ...
+
+describe('AppController (e2e)', () => {
+  
+  // ...
+
+  it('/book/index [DELETE][200]', async () => {
+    await request(app.getHttpServer()).delete('/book/0').expect(200);
+    await request(app.getHttpServer()).get('/book/0').expect(404);
+  });
+
+  it('/book/index [DELETE][404]', () => {
+    return request(app.getHttpServer()).delete('/book/1').expect(404);
+  });
+});
+```
+
 Et voila! on a terminé ce petit controlleur REST.
 
 ## Conclusion
 
 Laisse-moi tes questions en commentaire, je me ferai un plaisir d'y répondre.
+
+Un exemple complet du TP est disponible sur github <PLACHOLDER>
 
 Ou viens directement les poser sur le serveur [discord webeleon!](https://discord.gg/G3QTwBJfsx)
 

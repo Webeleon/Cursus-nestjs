@@ -11,6 +11,8 @@
 - [TP](./1-installation/TP.md)
 
 ## [2 - Les modules partie 1](./2-les-modules-partie-1/2-les-modules-partie-1.md)
+- [video]()
+- [dev.to]()
 
 ## [3 - Controlleurs](3-controllers/3-controllers.md)
 - [quizz](3-controllers/quizz.md)
@@ -41,7 +43,7 @@
 ## SQL via TYPEORM
 ### installation et configuration
 ### création de schema
-### utilisation dans un service
+### utilisation dans un servi`ce
 ### Instance in memory pour les tests
 
 ## Gestion des erreurs
@@ -72,3 +74,6 @@
 
 ## Nest Axios
 ### Tester avec Axios
+
+## Microservice
+

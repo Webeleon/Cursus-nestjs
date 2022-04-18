@@ -32,7 +32,7 @@ class Url {
 - installer `class-validator` et `class-transformer`
 - créer une dto avec `CreateUrlDto` qui prendra une propriété target étant une url valide.
 
-- Injecter le `Repository<User>` dans le service d'url
+- Injecter le `Repository<Url>` dans le service d'url
 - créer une méthode `create` dans le service qui acceptera en paramétre un objet respectant la dto `CreateUrlDto`
 - sauvegarder en base l'url
 - écrire un test unitaire en utilisant une base en mémoire via `better-sqlite3`
@@ -43,4 +43,6 @@ class Url {
 - écrire un test unitaire
 
 - écrire un test end 2 end
+
+- ajouter un endpoint `[GET] /url/:id` qui récupére le liens dans la db et redirige dessus
 

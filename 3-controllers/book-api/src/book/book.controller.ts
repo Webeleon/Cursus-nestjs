@@ -1,10 +1,17 @@
-import { Body, Controller, Delete, Get, NotFoundException, Param, Post, Put } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  NotFoundException,
+  Param,
+  Post,
+  Put,
+} from '@nestjs/common';
 
 @Controller('book')
 export class BookController {
-  books: string[] = [
-    'Apprendre NestJS, c\'est facile',
-  ];
+  books: string[] = ['le secret de ji'];
 
   @Get()
   list() {
@@ -12,45 +19,34 @@ export class BookController {
   }
 
   @Get('/:index')
-  getBookByIndex(
-    @Param('index') index: string,
-  ) {
-    if (!this.books[index]) {
-      throw new NotFoundException(`Book with index ${index} does not exist!`);
+  getByIndex(@Param('index') index: string): string {
+    const book = this.books[index];
+    if (!book) {
+      throw new NotFoundException();
     }
-    return this.books[index];
+    return book;
   }
 
   @Post()
-  addBook(
-    @Body('title') book: string
-  ) {
-    this.books.push(book)
-    return book
+  addBook(@Body('title') book: string) {
+    this.books.push(book);
+    return book;
   }
 
   @Put('/:index')
-  updateBook(
-    @Param('index') index: string,
-    @Body('title') book: string,
-  ) {
+  updateBook(@Param('index') index: string, @Body('title') book: string) {
     if (!this.books[index]) {
-      throw new NotFoundException(`Book with index ${index} does not exist!`)
+      throw new NotFoundException();
     }
     this.books[index] = book;
     return book;
   }
 
   @Delete('/:index')
-  deleteBook(
-    @Param('index') index: string
-  ) {
+  deleteBook(@Param('index') index: string) {
     if (!this.books[index]) {
-      throw new NotFoundException(`Book with index ${index} does not exist!`)
+      throw new NotFoundException();
     }
-
     delete this.books[index];
-
-    return 'deleted';
   }
 }
