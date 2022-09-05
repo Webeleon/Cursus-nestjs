@@ -7,8 +7,9 @@ Dans cette vidéo, je vais te parler d'un des éléments les plus important de N
 
 ## Un point SOLID
 
-SOLID est un acronyme qui représente 5 principe d'architecture logiciel qui ont pour objectif de rendres les source (orienté objet) plus lisible, compréhensible et maintenable.
+Avant de rentrer dans le gras du sujet, j'aimerais faire un rapide rappel sur un concept essentiel du clean code.
 
+SOLID est un acronyme qui représente 5 principe d'architecture logiciel qui ont pour objectif de rendres les source (orienté objet) plus lisible, compréhensible et maintenable.
 
 - <u>Principe de responsabilité unique *(Single responsibilty)*:</u> Une classe ne doit avoir qu'un seul et unique role!
 - <u>Principe d'ouverture-fermeture *(Open-closed principle)*:</u> Une classe doit être ouverte au extension (via un systéme de plugin par exemple, cf architecture hexagonale) mais fermé au modification.
@@ -19,6 +20,8 @@ SOLID est un acronyme qui représente 5 principe d'architecture logiciel qui ont
 ## Qu'est ce qu'un provider? 
 
 Les providers (literallement: fournisseurs) sont un concept fondamental de NestJS.
+
+Le terme peux paraitre un peu ésotérique mais il représente une réalité assez simple.
 
 **Il s'agit de classe compatible avec le systéme d'injection de dépendance de NestJS.** 
 Pour cela il faut ajouter l'annotation `@Injectable` du paquet `@nestjs/common` sur la class cible.
@@ -61,6 +64,11 @@ export class AppController {
   constructor(
     private readonly superProvider: MonSuperProvider,
   ) {}
+  
+  @Get()
+  getUnTruc() {
+    return this.superProvider.fetchUnTrucDansLaBDD();
+  }
 }
 ```
 
@@ -80,3 +88,50 @@ nest g service nomDuService
 ```
 
 # provider custom
+
+Il est aussi possible de rendre injectable dans un module plus ou moins n'importe quoi en utilisant le pattern des provider custom.
+
+Au lieu de fournir une classe dans la section providers, tu peux passer un objet qui contiendra le jeton d'injection (injection token) et le moyen de le récupérer.
+
+```ts
+import { Module } from '@nestjs/common';
+
+@Module({
+  imports: [],
+  controllers: [],
+  providers: [
+    {
+      provide: 'MA_CONSTANTE',
+      useValue: '1234'
+    },
+    {
+      provide: 'MON_SERVICE_MOCK',
+      useValue: {
+        unTruc: () => {
+          // implementation
+        }
+      }
+    }
+  ],
+})
+export class AppModule {}
+```
+
+Pour injecter un provider custom, il est necessaire d'utiliser le décorateur `@Inject(injection_token)`.
+
+```ts
+import { Injectable, Inject } from '@nestjs/common';
+
+@Injectable()
+class EncoreUnProvider {
+  constructor(
+    @Inject('MA_CONSTANTE') private readonly maConstante: string,
+    @Inject('MON_SERVICE_MOCK') private readonly monServiceMock: UneInterfaceOuUneClasse
+  ) {}
+}
+
+```
+
+Cette technique est trés utile pour la mise ne place de tests afin de limiter les dépendances.
+
+Ceci n'est qu'une approche superficielle des providers custom, [une documentation compléte est disponible en anglais](https://docs.nestjs.com/fundamentals/custom-providers)
