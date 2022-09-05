@@ -1,6 +1,7 @@
 ## TP: Validation
 
 1 - créer une nouvelle application NestJS appelé `recipe-API`
+
 2 - créer un controlleur `recipe`
 
 3 - créer une route d'ajout de recette en POST qui acceptera un Body et le validera selon l'interface suivantes:

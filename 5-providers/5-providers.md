@@ -1,5 +1,10 @@
 # 5 - Providers
 
+Bonjour et bienvenue dans le cinquiéme module du cursus NestJS par Webeleon!
+Je m'appel Julien et je serai ton guide tout au long de cette aventure.
+
+Dans cette vidéo, je vais te parler d'un des éléments les plus important de NestJS: **Les providers**
+
 ## Un point SOLID
 
 SOLID est un acronyme qui représente 5 principe d'architecture logiciel qui ont pour objectif de rendres les source (orienté objet) plus lisible, compréhensible et maintenable.
@@ -22,7 +27,7 @@ Pour cela il faut ajouter l'annotation `@Injectable` du paquet `@nestjs/common` 
 import { Injectable } from '@nestjs/common';
 
 @Injectable()
-class MonSuperProvider {}
+export class MonSuperProvider {}
 ```
 
 Cette logique va permettre de créer un ensemble d'outils qui vont pouvoir être cabler facilement.
@@ -74,3 +79,4 @@ Création rapide via la ligne de commande nest:
 nest g service nomDuService
 ```
 
+# provider custom

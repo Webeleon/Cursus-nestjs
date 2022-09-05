@@ -30,6 +30,7 @@ Le décorateur `@Module` accepte un objet de configuration avec les propriétés
 - `providers` liste les providers (ou fournisseur en français) disponible pour l'injection de dépendances dans le module
 - `controllers` définit les controller à instancier pour ce module
 - `exports` permet d'exposer des providers qui seront disponible dans les modules qui importerons ce module.
+
 Je t'en parlerai en détails dans une prochaine vidéo. *alors abonne toi*
 
 ## Créer un module

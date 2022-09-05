@@ -26,7 +26,7 @@
 - [quizz](5-providers/quizz.md)
 - [TP](5-providers/TP.md)
 
-## [6 - Modules](6-modules/6 - modules.md)
+## [6 - Modules](6-modules/6-modules.md)
 - [quizz](6-modules/quizz.md)
 - [TP](6-modules/TP.md)
 
