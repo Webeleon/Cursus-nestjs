@@ -11,14 +11,19 @@
 - [TP](./1-installation/TP.md)
 
 ## [2 - Les modules partie 1](./2-les-modules-partie-1/2-les-modules-partie-1.md)
-- [video]()
-- [dev.to]()
+- [video](https://www.youtube.com/watch?v=OeaxHbjEtTQ)
+- [dev.to](https://dev.to/webeleon/cursus-nestjs-les-modules-partie-1-4295)
+- TP: à venir
 
 ## [3 - Controlleurs](3-controllers/3-controllers.md)
+- [video](https://www.youtube.com/watch?v=LD94TuWBJX0&t=2s)
+- [dev.to](https://dev.to/webeleon/cursus-nestjs-les-controllers-4bm0)
 - [quizz](3-controllers/quizz.md)
 - [TP](3-controllers/TP.md)
 
 ### [4 - Validation via les DTO](4-validation-via-dto/4-validation-via-dto.md)
+- [video](https://www.youtube.com/watch?v=GYZhmAp_U18)
+- [dev.to](https://dev.to/webeleon/cursus-nestjs-validation-via-les-dto-2h25)
 - [quizz](4-validation-via-dto/quizz.md)
 - [TP](4-validation-via-dto/TP.md)
 
@@ -40,11 +45,17 @@
 - [Quizz](8-configurations/8-quizz.md)
 - [TP](8-configurations/8-TP.md)
 
-## SQL via TYPEORM
-### installation et configuration
-### création de schema
-### utilisation dans un servi`ce
-### Instance in memory pour les tests
+## [9.0 - SQL via TYPEORM](9-typeorm/9.0-typeorm.md)
+### [9.1 - installation et configuration](9-typeorm/9.1-installation-et-configuration.md)
+### [9.2 - entities and repositories](9-typeorm/9.2-entities-et-repository.md) 
+### [9.3 - tester avec une db en memoire](9-typeorm/9.3-tester avec une db en mémoire.md)
+### [9.4 - relations](9-typeorm/9.4-relations.md)
+### 9.5 - migrations: à venir
+
+## [mini projet: créer un service d'url courte](mini-ptojet-service-url-courte/README.md)
+
+
+# Sujet à venir:
 
 ## Gestion des erreurs
 
