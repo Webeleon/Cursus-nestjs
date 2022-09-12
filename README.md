@@ -57,7 +57,9 @@
 
 # Sujet à venir:
 
-## Gestion des erreurs
+## Swagger
+### Installation et configuration
+### Annotations les plus courantes
 
 ## Mongodb via mongoose
 ### installation et configuration
@@ -65,21 +67,25 @@
 ### utilisation dans un service
 ### Instance in memory pour les tests
 
-## Guards
-
-## Swagger
-### Installation et configuration
-### Annotations les plus courantes
-
-## Graphql
-
-## MVC
+## API websocket
 
 ## Authentification et Authorization
 ### Inscription et connection via email et mot de passe
 ### Authentification à partir d'un token jwt
 ### Gestion des roles
 ### Login via google, discord, facebook
+### Active directory, ldap
+### 
+
+## Graphql
+
+## CQRS
+
+## Guards
+
+## Gestion des erreurs
+
+## MVC
 
 ## Docker
 
