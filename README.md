@@ -28,6 +28,8 @@
 - [TP](4-validation-via-dto/TP.md)
 
 ## [5 - Providers](5-providers/5-providers.md)
+- [video](https://youtu.be/supfEB6-uFI)
+- [dev.to](https://dev.to/webeleon/cursus-nestjs-les-providers-4lk9)
 - [quizz](5-providers/quizz.md)
 - [TP](5-providers/TP.md)
 
@@ -69,12 +71,12 @@
 
 ## API websocket
 
-## Authentification et Authorization
+**## Authentification et Authorization
 ### Inscription et connection via email et mot de passe
 ### Authentification à partir d'un token jwt
 ### Gestion des roles
 ### Login via google, discord, facebook
-### Active directory, ldap
+### Active directory,** ldap
 ### 
 
 ## Graphql
