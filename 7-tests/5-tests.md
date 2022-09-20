@@ -6,10 +6,24 @@ La littérature sur le sujet abonde tant sur papier, qu'en blog ou qu'en vidéo.
 
 Il s'agit d'écrire du code qui vérifiera que notre code fonctionne comme prévue.
 
+Le plus gros bénéfice des tests, reste la réduction du stress lors des refacto. // a reformuler
+
 ## Test Driven Developement (TDD)
 
 Le TDD consiste à écrire les tests et ensuite écrire le code.
-Cette discipline à l'avantage d'encourager la réfléxion en amont.
+Cette discipline à l'avantage d'encourager la réfléxion en amont .
+
+## Deux grande famille de test
+### Les tests unitaires
+
+Le meilleur ami du dev, ils sont rapide à écrire et ne coute pas chere.
+Ils visent à tester un point une fonction, un cas d'usage extrêmement limité.
+
+### Les tests end 2 end
+
+Le meilleur ami du QA ou du PO, ils sont plus long à écrire et plus long à executer.
+Ils demandent une infrastructure (base de données).
+Ils couvrent l'intégralité du code.
 
 ## Jest
 

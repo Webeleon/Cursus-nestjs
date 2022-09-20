@@ -57,7 +57,7 @@ describe('AppController (e2e)', () => {
   });
 
   it('/ (GET)', async () => {
-    const { body, status } = request(app.getHttpServer())
+    const { body, status } = await request(app.getHttpServer())
       .get('/');
     
     expect(status).toBe(200);
@@ -65,7 +65,7 @@ describe('AppController (e2e)', () => {
   });
 
   it('/ (DELETE)', async () => {
-    const { body, status } = request(app.getHttpServer())
+    const { body, status } = await request(app.getHttpServer())
       .delete('/');
 
     expect(status).toBe(200);
@@ -93,7 +93,7 @@ describe('AppController (e2e)', () => {
   });
 
   it('/ (POST)', async () => {
-    const { body, status } = request(app.getHttpServer())
+    const { body, status } = await request(app.getHttpServer())
       .send({
         // Le body va ici!
       })
@@ -125,7 +125,7 @@ describe('AppController (e2e)', () => {
   });
 
   it('/ (Header)', async () => {
-    const { body, status } = request(app.getHttpServer())
+    const { body, status } = await request(app.getHttpServer())
       .get('/') 
       .set({
         Authorization: 'Bearer XXXXXXXX',

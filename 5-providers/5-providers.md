@@ -111,6 +111,19 @@ import { Module } from '@nestjs/common';
           // implementation
         }
       }
+    },
+    {
+      provide: 'injection token',
+      useClass: ClassToUse,
+    },
+    {
+      provide: 'injection token',
+      imports: [/* module dont dépend la factory */],
+      inject: [/* providers à injecter dans la factory */],
+      useFactory: async (/* dépendance injecté dans le même ordre que déclaré au dessus */) => {
+        // logique permettant de construire le provider
+        return // provider construit, ce qui sera injecté.
+      }
     }
   ],
 })
@@ -135,3 +148,14 @@ class EncoreUnProvider {
 Cette technique est trés utile pour la mise ne place de tests afin de limiter les dépendances.
 
 Ceci n'est qu'une approche superficielle des providers custom, [une documentation compléte est disponible en anglais](https://docs.nestjs.com/fundamentals/custom-providers)
+
+## Conclusion
+
+Laisse-moi tes questions en commentaire, je me ferai un plaisir d'y répondre.
+
+L'intégralité du cursus est disponible sur [github](https://github.com/Webeleon/Cursus-nestjs).
+
+Ou viens directement les poser sur le serveur [discord webeleon!](https://discord.gg/G3QTwBJfsx)
+
+La prochaine fois nous verrons l'utilisation avancée des modules alors abonne-toi pour progresser rapidement sur NestJS!
+
