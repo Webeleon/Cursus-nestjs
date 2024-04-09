@@ -33,9 +33,9 @@
 - [quizz](5-providers/quizz.md)
 - [TP](5-providers/TP.md)
 
-## [6 - Modules](6-modules/6-modules.md)
-- [quizz](6-modules/quizz.md)
-- [TP](6-modules/TP.md)
+## [6 - Modules partie 2](6-modules-partie-2/6-modules partie 2.md)
+- [video](https://www.youtube.com/watch?v=cquAmt2oF9s)
+- [TP](6-modules-partie-2/TP.md)
 
 ## [7 - Tests](7-tests/5-tests.md)
 ### [tests unitaire](7-tests/5-tests-unitaires.md)
