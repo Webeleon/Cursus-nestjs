@@ -1,6 +1,6 @@
 # 6 - configurations TP
 
-- créer une nouvelle app `6-config`
+- créer une nouvelle app `8-config`
 - installer le module de config
 - créer un fichier .env à la racine contenant une variable `PORT=8080`
 - créer un fichier de config `config/app.config.ts` qui déclare un namespace de config `app` et une interface `AppConfig`

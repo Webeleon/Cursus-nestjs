@@ -111,7 +111,7 @@ Pour tester plusieurs solution s'offre à toi:
 - via un outils comme [postman](https://www.postman.com/)
 
 Pour éviter de refaire ce même test manuellement, l'ideal est d'ajouter un test end to end pour automatiser.
-Histoire de rester simple, ajoute une cas de test dans le fichier `test/app.e2e-spec.ts`.
+Histoire de rester simple, ajoute une cas de test dans le fichier `test/app.spec.ts`.
 ```ts
 import { Test, TestingModule } from '@nestjs/testing';
 import { INestApplication } from '@nestjs/common';
@@ -170,7 +170,7 @@ Pour tester, même techniques qu'avant mais sur les routes
 - `http://localhost:3000/book/0`
 - `http://localhost:3000/book/1`
 
-Ajoute ces deux cas de test fonctionnel dans le fichier `test/app.e2e-spec.ts` pour automatiser le test.
+Ajoute ces deux cas de test fonctionnel dans le fichier `test/app.spec.ts` pour automatiser le test.
 
 ```ts
 // import dans l'exemple précédent

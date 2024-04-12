@@ -110,6 +110,7 @@ describe('CalculatorController', () => {
     controller.getSum(1, 2);
     // Vérifie que notre mock à bien été utilisé par le controlleur
     expect(calculatorServiceMock.sum).toHaveBeenCalled();
+    
   })
 });
 ```
