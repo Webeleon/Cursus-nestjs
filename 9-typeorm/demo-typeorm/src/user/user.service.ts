@@ -7,15 +7,13 @@ import { CreateUserDto } from './dto/create-user.dto';
 @Injectable()
 export class UserService {
   constructor(
-    @InjectRepository(User) private readonly userRepository: Repository<User>
+    @InjectRepository(User) private readonly userRepository: Repository<User>,
   ) {}
 
-  list(
-    page: number = 1, pageSize: number = 10,
-  ): Promise<User[]> {
+  list(page = 1, pageSize = 10): Promise<User[]> {
     return this.userRepository.find({
       skip: (page - 1) * pageSize,
-      take: pageSize
+      take: pageSize,
     });
   }
 

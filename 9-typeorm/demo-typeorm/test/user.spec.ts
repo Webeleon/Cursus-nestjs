@@ -1,26 +1,22 @@
 import { INestApplication } from '@nestjs/common';
 import { Test, TestingModule } from '@nestjs/testing';
 import { AppModule } from '../src/app.module';
-import * as request from "supertest";
+import * as request from 'supertest';
+import { getTestingModule } from './utils/testing-module.utils';
 
-describe("[e2e] user", () => {
+describe('[e2e] user', () => {
   let app: INestApplication;
 
   beforeEach(async () => {
-    process.env.DB_TYPE = 'better-sqlite3';
-    process.env.DATABASE = ':memory:';
-
-    const testModule: TestingModule = await Test.createTestingModule({
-      imports: [AppModule]
-    }).compile();
+    const testModule: TestingModule = await getTestingModule();
 
     app = testModule.createNestApplication();
     await app.init();
-  })
+  });
 
   afterEach(async () => {
     await app.close();
-  })
+  });
 
   it('list users', async () => {
     const server = request(app.getHttpServer());
@@ -31,4 +27,4 @@ describe("[e2e] user", () => {
     expect(status).toBe(200);
     expect(body).toStrictEqual([]);
   });
-})
+});
