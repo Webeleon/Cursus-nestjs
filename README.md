@@ -54,6 +54,8 @@
 ### [9.4 - relations](9-typeorm/9.4-relations.md)
 ### 9.5 - migrations: à venir
 
+## [10 - Middlewares](./10-middlewares)
+
 ## [mini projet: créer un service d'url courte](mini-ptojet-service-url-courte/README.md)
 
 
